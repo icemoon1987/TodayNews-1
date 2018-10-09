@@ -126,7 +126,7 @@ class DongtaiTableViewController: UITableViewController {
         tableView.theme_backgroundColor = "colors.cellBackgroundColor"
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.separatorStyle = .none
         tableView.bounces = false
         tableView.bouncesZoom = false

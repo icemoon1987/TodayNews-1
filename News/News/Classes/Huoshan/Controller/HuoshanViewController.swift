@@ -13,7 +13,7 @@ class HuoshanViewController: UIViewController {
     
     var pageContentView: SGPageContentView?
     /// 懒加载 导航栏
-    private lazy var navigationBar = HuoshanNavigationBar()
+    private lazy var navigationBar = HuoshanNavigationBar(frame: CGRect.zero)
 
     override func viewDidLoad() {
         super.viewDidLoad()

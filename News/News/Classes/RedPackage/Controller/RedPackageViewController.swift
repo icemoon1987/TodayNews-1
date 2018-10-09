@@ -70,7 +70,7 @@ extension RedPackageViewController {
             NewYearActivity.deserialize(from: $0 as? [String: Any])
         })
         tableView.ym_registerCell(cell: NewYearActivityCell.self)
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.tableHeaderView = headerView
         tableView.bounces = false
         tableView.rowHeight = 180

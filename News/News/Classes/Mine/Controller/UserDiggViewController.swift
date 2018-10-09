@@ -19,7 +19,7 @@ class UserDiggViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.title = "赞过的人"
         SVProgressHUD.configuration()
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.ym_registerCell(cell: UserDiggCell.self)
         tableView.mj_footer = RefreshAutoGifFooter(refreshingBlock: { [weak self] in
             // 获取动态详情的用户点赞列表数据

@@ -193,7 +193,7 @@ class UserDetailHeaderView: UIView, NibLoadable {
                     tableView.isScrollEnabled = false
                     tableView.showsVerticalScrollIndicator = false
                     tableView.separatorStyle = .none
-                    tableView.tableFooterView = UIView()
+                    tableView.tableFooterView = UIView(frame: CGRect.zero)
                     bottomScrollView.addSubview(tableView)
                     if index == userDetail!.top_tab.count - 1 {
                         scrollView.contentSize = CGSize(width: button.frame.maxX, height: scrollView.height)
@@ -216,7 +216,7 @@ class UserDetailHeaderView: UIView, NibLoadable {
         return indicatorView
     }()
     
-    weak var privorButton = UIButton()
+    weak var privorButton = UIButton(type: UIButton.ButtonType.custom)
     /// 点击了头像
     var didSelectAvatarImageView: (()->())?
     /// 点击了 cell

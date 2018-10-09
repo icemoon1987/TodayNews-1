@@ -31,7 +31,7 @@ class MineViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.tableHeaderView = headerView
         tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
         tableView.separatorStyle = .none

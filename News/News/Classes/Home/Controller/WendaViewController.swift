@@ -34,7 +34,7 @@ class WendaViewController: UIViewController {
         // 获取问答的列表数据（提出了问题） proposeQuestion(1029)
         NetworkTool.loadProposeQuestionBrow(qid: qid, enterForm: enterForm) {
             self.answers = $0.ans_list
-            self.tableView.tableFooterView = UIView()
+            self.tableView.tableFooterView = UIView(frame: CGRect.zero)
             self.bottomView.modules = $0.module_list
             self.headerView.question = $0.question
             self.tableView.tableHeaderView = self.headerView

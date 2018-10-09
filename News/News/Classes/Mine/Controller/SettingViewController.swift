@@ -96,7 +96,7 @@ extension SettingViewController {
         tableView.sectionHeaderHeight = 10
         tableView.ym_registerCell(cell: SettingCell.self)
         tableView.rowHeight = 44
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.separatorStyle = .none
         tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
     }

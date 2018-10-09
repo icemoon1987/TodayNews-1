@@ -77,7 +77,7 @@ extension DongtaiDetailViewController {
         // 添加通知
         NotificationCenter.default.addObserver(self, selector: #selector(receiveDayOrNightButtonClicked), name: NSNotification.Name(rawValue: "dayOrNightButtonClicked"), object: nil)
         tableView.tableHeaderView = headerView
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.ym_registerCell(cell: DongtaiCommentCell.self)
         SVProgressHUD.configuration()
         switch dongtai.item_type {

@@ -12,7 +12,7 @@ import Lottie
 class RedPackageHeaderView: UIView {
     // 提醒
     lazy var remindButton: UIButton = {
-        let remindButton = UIButton()
+        let remindButton = UIButton(type: UIButton.ButtonType.custom)
         remindButton.setImage(UIImage(named: "sf_main_newpreheat_push_icon"), for: .normal)
         remindButton.setTitle("活动开始提醒我", for: .normal)
         remindButton.sizeToFit()

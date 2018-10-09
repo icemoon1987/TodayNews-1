@@ -18,7 +18,8 @@ class WendaAnswerBottomView: UIView {
     var modules = [WendaModule]() {
         didSet {
             for (index, module) in modules.enumerated() {
-                let button = BottomButton(frame: CGRect(x: CGFloat(index) * buttonWidth, y: 0, width: buttonWidth, height: 40))
+                let button = BottomButton(type: UIButton.ButtonType.custom)
+                button.frame = CGRect(x: CGFloat(index) * buttonWidth, y: 0, width: buttonWidth, height: 40)
                 button.setTitle(module.text, for: .normal)
                 button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
                 button.theme_setTitleColor("colors.black", forState: .normal)

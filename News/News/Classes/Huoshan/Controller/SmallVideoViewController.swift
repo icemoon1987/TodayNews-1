@@ -16,7 +16,7 @@ import SnapKit
 class SmallVideoViewController: UIViewController {
 
     /// 播放器
-    private lazy var player = BMPlayer(customControlView: SmallVideoPlayerCustomView())
+    private lazy var player = BMPlayer(customControlView: SmallVideoPlayerCustomView(frame: CGRect.zero))
     
     private let disposeBag = DisposeBag()
     /// 小视频数组

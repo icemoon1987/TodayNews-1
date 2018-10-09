@@ -15,14 +15,17 @@ class TopTabScrollView: UIScrollView {
     /// 当前选中的 topTab 的索引，点击了第几个
     var currentSelectedIndex = 0
     
-    weak var privorButton = UIButton()
+    weak var privorButton = UIButton(type: UIButton.ButtonType.custom)
     
     var topTabs = [TopTab]() {
         didSet {
             // 添加按钮和 tableView
             for (index, topTab) in topTabs.enumerated() {
                 // 添加按钮
-                let button = UIButton(frame: CGRect(x: CGFloat(index) * topTabButtonWidth, y: 0, width: topTabButtonWidth, height: height))
+                let button = UIButton(type: UIButton.ButtonType.custom)
+                    
+                button.frame = CGRect(x: CGFloat(index) * topTabButtonWidth, y: 0, width: topTabButtonWidth, height: height)
+                
                 button.setTitle(topTab.show_name, for: .normal)
                 button.tag = index
                 button.titleLabel?.font = UIFont.systemFont(ofSize: 16)

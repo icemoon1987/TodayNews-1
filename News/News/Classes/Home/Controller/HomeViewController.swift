@@ -21,7 +21,10 @@ class HomeViewController: UIViewController {
     private lazy var disposeBag = DisposeBag()
     /// 添加频道按钮
     private lazy var addChannelButton: UIButton = {
-        let addChannelButton = UIButton(frame: CGRect(x: screenWidth - newsTitleHeight, y: 0, width: newsTitleHeight, height: newsTitleHeight))
+        let addChannelButton = UIButton(type : UIButton.ButtonType.custom)
+            
+        addChannelButton.frame = CGRect(x: screenWidth - newsTitleHeight, y: 0, width: newsTitleHeight, height: newsTitleHeight)
+        
         addChannelButton.theme_setImage("images.add_channel_titlbar_thin_new_16x16_", forState: .normal)
         let separatorView = UIView(frame: CGRect(x: 0, y: newsTitleHeight - 1, width: newsTitleHeight, height: 1))
         separatorView.theme_backgroundColor = "colors.separatorViewColor"

@@ -22,7 +22,7 @@ class VideoDetailViewController: UIViewController {
     
     weak var delegate: VideoDetailViewControllerDelegate?
     /// 播放器
-    private lazy var player: BMPlayer = BMPlayer(customControlView: BMPlayerControlView())
+    private lazy var player: BMPlayer = BMPlayer(customControlView: BMPlayerControlView(frame: CGRect.zero))
     /// 当前视频数据
     var video = NewsModel()
     /// 评论数据
@@ -42,12 +42,12 @@ class VideoDetailViewController: UIViewController {
     /// 用户信息 view
     private lazy var userView = VideoDetailUserView.loadViewFromNib()
     /// 相关新视频的 view
-    private lazy var relatedVideoView = RelatedVideoView()
+    private lazy var relatedVideoView = RelatedVideoView(frame: CGRect.zero)
     /// tableView
     private lazy var tableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: CGRect.zero)
         tableView.ym_registerCell(cell: DongtaiCommentCell.self)
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
@@ -56,7 +56,7 @@ class VideoDetailViewController: UIViewController {
     }()
     /// 返回按钮
     private lazy var backButton: UIButton = {
-        let backButton = UIButton()
+        let backButton = UIButton(frame: CGRect.zero)
         backButton.rx.controlEvent(.touchUpInside)
             .subscribe(onNext: { [weak self] in
                 self!.navigationController?.popViewController(animated: true)

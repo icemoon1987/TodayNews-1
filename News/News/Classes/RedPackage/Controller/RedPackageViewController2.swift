@@ -100,7 +100,7 @@ extension RedPackageViewController2 {
         tableView.ym_registerCell(cell: NewYearCardCell.self)
         tableView.ym_registerCell(cell: RedPackageCell.self)
         tableView.ym_registerCell(cell: NewYearOtherCell.self)
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.tableHeaderView = headerView
         tableView.bounces = false
         tableView.separatorStyle = .none
