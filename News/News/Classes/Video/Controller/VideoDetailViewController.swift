@@ -56,7 +56,10 @@ class VideoDetailViewController: UIViewController {
     }()
     /// 返回按钮
     private lazy var backButton: UIButton = {
-        let backButton = UIButton(frame: CGRect.zero)
+        let backButton = UIButton(type: UIButtonType.custom)
+        
+        backButton.frame = CGRect.zero
+        
         backButton.rx.controlEvent(.touchUpInside)
             .subscribe(onNext: { [weak self] in
                 self!.navigationController?.popViewController(animated: true)

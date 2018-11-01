@@ -8,7 +8,7 @@ PODS:
     - NVActivityIndicatorView (~> 4.0.0)
     - SnapKit (~> 4.0.0)
   - FDFullscreenPopGesture (1.1)
-  - HandyJSON (4.1.1)
+  - HandyJSON (4.2.0)
   - IBAnimatable (5.0.0)
   - Kingfisher (4.7.0)
   - lottie-ios (2.5.0)
@@ -32,7 +32,7 @@ DEPENDENCIES:
   - Alamofire
   - BMPlayer
   - FDFullscreenPopGesture
-  - HandyJSON (~> 4.1.1)
+  - HandyJSON (~> 4.2.0)
   - IBAnimatable
   - Kingfisher
   - lottie-ios
@@ -45,11 +45,31 @@ DEPENDENCIES:
   - SwiftTheme
   - SwiftyJSON
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - BMPlayer
+    - FDFullscreenPopGesture
+    - HandyJSON
+    - IBAnimatable
+    - Kingfisher
+    - lottie-ios
+    - MJRefresh
+    - NVActivityIndicatorView
+    - RxCocoa
+    - RxSwift
+    - SGPagingView
+    - SnapKit
+    - SQLite.swift
+    - SVProgressHUD
+    - SwiftTheme
+    - SwiftyJSON
+
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   BMPlayer: 44eebf06eb01450dd14ea74b27d07c5222f0eed1
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
-  HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
+  HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
   IBAnimatable: aa2286a9cf8fb4ae2e1be85c5287ae56143b024f
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
@@ -64,6 +84,6 @@ SPEC CHECKSUMS:
   SwiftTheme: 36d71c4eed4b2c401c782cf036e4586c749a8173
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: efac193b2b9675dbb674415cb571da4c2e67f8cf
+PODFILE CHECKSUM: ad78042965d7de2d6c9b0294c48b6fe8cfbb2fdf
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

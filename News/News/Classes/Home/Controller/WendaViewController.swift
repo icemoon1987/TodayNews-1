@@ -65,7 +65,8 @@ class WendaViewController: UIViewController {
     
     /// 懒加载 悟空问答图标
     private lazy var navigationButton: UIButton = {
-        let navigationButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
+        let navigationButton = UIButton(type: UIButtonType.custom)
+        navigationButton.frame = CGRect(x: 0, y: 0, width: 200, height: 44)
         navigationButton.isUserInteractionEnabled = false
         navigationButton.theme_setImage("colors.wukonglogo_ask_bar_90x20_", forState: .normal)
         return navigationButton

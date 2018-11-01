@@ -168,7 +168,10 @@ class UserDetailHeaderView: UIView, NibLoadable {
                 // 添加按钮和 tableView
                 for (index, topTab) in userDetail!.top_tab.enumerated() {
                     // 添加按钮
-                    let button = UIButton(frame: CGRect(x: CGFloat(index) * topTabButtonWidth, y: 0, width: topTabButtonWidth, height: scrollView.height))
+                    let button = UIButton(type: UIButtonType.custom)
+                    
+                    button.frame = CGRect(x: CGFloat(index) * topTabButtonWidth, y: 0, width: topTabButtonWidth, height: scrollView.height)
+                    
                     button.setTitle(topTab.show_name, for: .normal)
                     button.tag = index
                     button.titleLabel?.font = UIFont.systemFont(ofSize: 16)

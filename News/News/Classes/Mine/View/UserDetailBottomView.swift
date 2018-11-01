@@ -23,7 +23,10 @@ class UserDetailBottomView: UIView {
             // 添加按钮
             for (index, bottomTab) in bottomTabs.enumerated() {
                 // 按钮
-                let button = UIButton(frame: CGRect(x: CGFloat(index) * (buttonWidth + 1), y: 0, width: buttonWidth, height: height))
+                let button = UIButton(type: UIButtonType.custom)
+                
+                button.frame = CGRect(x: CGFloat(index) * (buttonWidth + 1), y: 0, width: buttonWidth, height: height)
+                
                 button.setTitle(bottomTab.name, for: .normal)
                 button.tag = index
                 button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
